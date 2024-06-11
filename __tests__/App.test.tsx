@@ -8,7 +8,7 @@ it("Renders Message", async () => {
   const { getByTestId, getByText, queryByTestId, toJSON } = render(<App />);
 
   const button = getByText("Say Hello");
-  fireEvent.press(button);
+  fireEvent.press(button); // Comment
 
   await waitFor(() => expect(queryByTestId("printed-message")).toBeTruthy());
 
